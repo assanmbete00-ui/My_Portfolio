@@ -1,0 +1,30 @@
+
+import { SxProps } from "@mui/material"
+
+const styles = {
+  appBar: {
+    backgroundColor: "background.paper",
+    boxShadow: "none",
+    borderBottom: "1px solid",
+    borderColor: "divider",
+  } as SxProps,
+
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+  } as SxProps,
+
+  logo: {
+    fontWeight: 700,
+    fontSize: "1.2rem",
+    cursor: "pointer",
+  } as SxProps,
+
+  nav: {
+    display: "flex",
+    gap: 3,
+  } as SxProps,
+}
+
+export default styles
