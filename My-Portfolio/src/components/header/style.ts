@@ -1,9 +1,10 @@
 
 import { SxProps } from "@mui/material"
+import { COLORS } from "@constants/colors"
 
 const styles = {
   appBar: {
-    backgroundColor: "background.paper",
+    backgroundColor: COLORS.background.paper,
     boxShadow: "none",
     borderBottom: "1px solid",
     borderColor: "divider",

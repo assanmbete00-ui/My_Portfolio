@@ -1,120 +1,84 @@
-import {
-  Box,
-  Typography,
-  Button,
-  Stack,
-  Card,
-  CardContent,
-  Avatar,
-} from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Box, Typography, Chip } from "@mui/material"
+import Reveal from "../../../../components/reveal"
+import profil1 from "@assets/profils/profil1.jpeg"
+import styles from "./styles"
 
-export default function Me() {
-  const navigate = useNavigate();
-
-  const handleNavigate = (path: string) => {
-    navigate(path);
-  };
-
+const Me = () => {
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 4,
-        backgroundColor: "background.default",
-      }}
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <Card
-          sx={{
-            maxWidth: 600,
-            width: "100%",
-            textAlign: "center",
-            backgroundColor: "background.paper",
-            border: "1px solid",
-            borderColor: "divider",
-          }}
-        >
-          <CardContent sx={{ padding: 4 }}>
-            <Avatar
-              sx={{
-                width: 120,
-                height: 120,
-                margin: "0 auto 24px",
-                backgroundColor: "primary.main",
-                fontSize: "3rem",
-              }}
-            >
-              A
-            </Avatar>
+    <Box id="about" sx={styles.root}>
+      <Box sx={styles.grid}>
 
-            <Typography variant="h3" gutterBottom fontWeight="bold">
-              Assan Mbete
+        {/* IMAGE */}
+        <Box>
+          <Reveal>
+            <Box sx={styles.imageContainer}>
+              <Box
+                component="img"
+                src={profil1}
+                alt="Assan Mbete"
+                sx={styles.image}
+              />
+
+              <Typography sx={styles.location}>
+                Yaoundé, Cameroun
+              </Typography>
+            </Box>
+          </Reveal>
+        </Box>
+
+        {/* TEXTE */}
+        <Box>
+          <Reveal>
+            <Typography variant="overline" sx={styles.overline}>
+              À propos
             </Typography>
+          </Reveal>
 
-            <Typography variant="h6" color="text.secondary" gutterBottom>
-              Développeur Full Stack
+          <Reveal delay={0.3}>
+            <Typography variant="h2" sx={styles.title}>
+              Un développeur qui transforme les idées en produits web{" "}
+              <em>concrets</em>
             </Typography>
+          </Reveal>
 
-            <Typography
-              variant="body1"
-              sx={{ marginBottom: 3, lineHeight: 1.6 }}
-            >
-              Passionné par le développement web moderne, je crée des
-              applications performantes avec React, TypeScript et Node.js. Mon
-              objectif est de construire des solutions qui font la différence.
+          <Reveal delay={0.4}>
+            <Typography variant="body1" sx={styles.text}>
+              Je conçois des applications web modernes, performantes et
+              maintenables...
             </Typography>
+          </Reveal>
 
-            <Stack
-              spacing={2}
-              direction={{ xs: "column", sm: "row" }}
-              justifyContent="center"
-            >
-              <Button
-                variant="contained"
-                onClick={() => handleNavigate("/")}
-                sx={{ minWidth: 140 }}
-              >
-                🏠 Accueil
-              </Button>
+          <Reveal delay={0.5}>
+            <Typography variant="body1" sx={styles.text}>
+              Mon parcours chez <strong>Lapnomba.org</strong>...
+            </Typography>
+          </Reveal>
 
-              <Button
-                variant="outlined"
-                onClick={() => handleNavigate("/about")}
-                sx={{ minWidth: 140 }}
-              >
-                📖 À propos
-              </Button>
+          <Reveal delay={0.6}>
+            <Typography variant="body1" sx={styles.textLast}>
+              Curieux et en apprentissage continu, j'explore actuellement{" "}
+              <strong>React avancé</strong>.
+            </Typography>
+          </Reveal>
 
-              <Button
-                variant="outlined"
-                onClick={() => handleNavigate("/projects")}
-                sx={{ minWidth: 140 }}
-              >
-                💼 Projets
-              </Button>
+          <Reveal delay={0.7}>
+            <Box sx={styles.chipsContainer}>
+              {[
+                "Code propre",
+                "API REST",
+                "Open source",
+                "Curiosité",
+                "Rigueur",
+              ].map((item, index) => (
+                <Chip key={index} label={item} variant="outlined" sx={styles.chip} />
+              ))}
+            </Box>
+          </Reveal>
+        </Box>
 
-              <Button
-                variant="outlined"
-                onClick={() => handleNavigate("/contact")}
-                sx={{ minWidth: 140 }}
-              >
-                📧 Contact
-              </Button>
-            </Stack>
-
-          </CardContent>
-        </Card>
-      </motion.div>
+      </Box>
     </Box>
-  );
+  )
 }
+
+export default Me

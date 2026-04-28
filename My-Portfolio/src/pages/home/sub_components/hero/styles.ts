@@ -1,5 +1,5 @@
-
 import { SxProps, Theme } from "@mui/material";
+import { COLORS } from "@constants/colors";
 
 const styles = {
   container: {
@@ -8,32 +8,32 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     px: 3,
-  } as SxProps<Theme>,
+  } as SxProps,
 
   stack: {
     textAlign: "center",
     maxWidth: "700px",
-  } as SxProps<Theme>,
+  } as SxProps,
 
   title: {
     fontWeight: "bold",
-  } as SxProps<Theme>,
+  } as SxProps,
 
   name: {
-    color: "#1976d2",
-  } as SxProps<Theme>,
+    color: COLORS.primary.main,
+  } as SxProps,
 
   role: {
-    color: "text.secondary",
-  } as SxProps<Theme>,
+    color: COLORS.text.secondary,
+  } as SxProps,
 
   description: {
-    color: "text.secondary",
-  } as SxProps<Theme>,
+    color: COLORS.text.secondary,
+  } as SxProps,
 
   actions: {
     justifyContent: "center",
-  } as SxProps<Theme>,
+  } as SxProps,
 };
 
 export default styles;

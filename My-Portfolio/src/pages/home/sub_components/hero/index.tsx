@@ -3,13 +3,19 @@ import { motion } from "framer-motion"
 import CustumButton from "@components/button"
 
 import styles from "./styles"
+import SectionTitle from "@components/sectionTitle"
+import { useNavigate } from "react-router-dom"
 
 export default function Hero() {
+  const navigate = useNavigate();
+
+  const handleNavigate = (path: string) => {
+    navigate(path);
+  };
   return (
     <Box sx={styles.container}>
       <Stack spacing={3} sx={styles.stack}>
 
-        {/* Animation intro */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -23,31 +29,32 @@ export default function Hero() {
           </Typography>
         </motion.div>
 
-        {/* Role */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <Typography variant="h5" sx={styles.role}>
+          <SectionTitle >
             Développeur React • TypeScript • MUI
-          </Typography>
+          </SectionTitle>
         </motion.div>
 
-        {/* Description */}
         <Typography sx={styles.description}>
           Je construis des applications web modernes, performantes et scalables
           avec une architecture propre et maintenable.
         </Typography>
 
-        {/* Actions */}
         <Stack direction="row" spacing={2} sx={styles.actions}>
-          <CustumButton>
+          <CustumButton  
+          onClick={() => handleNavigate("/projects")}
+          >
             Voir mes projets
           </CustumButton>
 
-          <CustumButton size="large" href="/cv.pdf">
-            Télécharger CV
+          <CustumButton  
+          onClick={() => handleNavigate("/contact")}
+          >
+            Contactez-moi
           </CustumButton>
         </Stack>
 

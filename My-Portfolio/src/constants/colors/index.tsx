@@ -1,5 +1,3 @@
-// src/constants/colors.ts
-
 export const COLORS = {
   primary: {
     main: "#1976d2",
@@ -8,13 +6,13 @@ export const COLORS = {
   },
 
   secondary: {
-    main: "#9c27b0",
+    main: "#bf16dc",
     light: "#ba68c8",
     dark: "#7b1fa2",
   },
 
   background: {
-    default: "#0f172a", // dark background
+    default: "#0f172a", 
     paper: "#1e293b",
   },
 
