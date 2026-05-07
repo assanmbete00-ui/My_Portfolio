@@ -1,28 +1,38 @@
 export const COLORS = {
   primary: {
-    main: "#1976d2",
-    light: "#42a5f5",
-    dark: "#1565c0",
+    main: "#F97316",
+    light: "#FB923C",
+    dark: "#EA580C",
   },
 
   secondary: {
-    main: "#bf16dc",
-    light: "#ba68c8",
-    dark: "#7b1fa2",
+    main: "#F9FAFB",
+    light: "#14B8A6",
+    dark: "#115E59",
   },
 
   background: {
-    default: "#0f172a", 
-    paper: "#1e293b",
+    default: "#0F172A",
+    paper: "#111827",
+    gradient: `
+      linear-gradient(
+        135deg,
+        #1E1B2E 0%,
+        #0F172A 50%,
+        #0A192F 100%
+      )
+    `,
   },
 
   text: {
-    primary: "#ffffff",
-    secondary: "#94a3b8",
+    primary: "#F9FAFB",
+    secondary: "#7f848f",
+    auther: "#111827",
   },
 
-  success: "#22c55e",
-  error: "#ef4444",
-  warning: "#f59e0b",
-  info: "#3b82f6",
-}
+  custom: {
+  footerLink: "#374151",
+},
+
+  divider: "#1F2937",
+};

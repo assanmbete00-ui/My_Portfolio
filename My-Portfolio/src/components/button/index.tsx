@@ -1,28 +1,27 @@
-import React from "react";
-import Button, { ButtonProps } from "@mui/material/Button";
-import { COLORS } from "@constants/colors";
+import MUIButton from "@mui/material/Button";
+import type { ButtonProps } from "@mui/material/Button";
+import styles from "./styles";
 
-interface CustomButtonProps extends ButtonProps {
-  component?: React.ElementType;
-  to?: string;
+type CustomButtonProps = ButtonProps & {
+  customVariant?: "contained" | "outlined" | "text";
+};
+
+export default function Button({
+  customVariant = "contained",
+  sx,
+  children,
+  ...rest
+}: CustomButtonProps) {
+  return (
+    <MUIButton
+      variant={customVariant}
+      sx={{
+        ...styles[customVariant],
+        ...sx,
+      }}
+      {...rest}
+    >
+      {children}
+    </MUIButton>
+  );
 }
-
-const CustomButton: React.FC<CustomButtonProps> = ({ sx, ...props }) => (
-  <Button
-    variant="contained"
-    sx={{
-      backgroundColor: COLORS.primary.main,
-      color: COLORS.text.primary,
-      textTransform: "none",
-      boxShadow: "none",
-      "&:hover": {
-        backgroundColor: COLORS.primary.dark,
-        opacity: 0.8,
-      },
-      ...sx,
-    }}
-    {...props}
-  />
-);
-
-export default CustomButton;

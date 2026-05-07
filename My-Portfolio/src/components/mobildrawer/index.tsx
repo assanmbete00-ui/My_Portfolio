@@ -1,39 +1,54 @@
-import {
-  Box,
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-} from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import navItems from "../header/navItems";
+import { Box, Drawer, IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import { NavLink } from "react-router-dom";
+import styles from "./styles";
 
-interface MobileDrawerProps {
+type MobileDrawerProps = {
   open: boolean;
   onClose: () => void;
-}
 
-export default function MobileDrawer({ open, onClose }: MobileDrawerProps) {
-  const navigate = useNavigate();
+  navLinks: {
+    label: string;
+    path: string;
+  }[];
+};
 
-  const handleNavigate = (path: string) => {
-    navigate(path);
-    onClose();
-  };
-
+export default function MobileDrawer({
+  open,
+  onClose,
+  navLinks,
+}: MobileDrawerProps) {
   return (
-    <Drawer anchor="right" open={open} onClose={onClose}>
-      <Box sx={{ width: 250, pt: 2 }}>
-        <List>
-          {navItems.map((item) => (
-            <ListItem disablePadding key={item.path}>
-              <ListItemButton onClick={() => handleNavigate(item.path)}>
-                <ListItemText primary={item.label} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+    <Drawer
+      anchor="right"
+      open={open}
+      onClose={onClose}
+      PaperProps={{
+        sx: styles.paper,
+      }}
+    >
+      <Box sx={styles.header}>
+        <IconButton onClick={onClose}>
+          <CloseIcon />
+        </IconButton>
+      </Box>
+
+      <Box sx={styles.navContainer}>
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.path}
+            to={link.path}
+            onClick={onClose}
+            style={({ isActive }) => ({
+              ...styles.navLink,
+              ...(isActive
+                ? styles.activeNavLink
+                : {}),
+            })}
+          >
+            {link.label}
+          </NavLink>
+        ))}
       </Box>
     </Drawer>
   );

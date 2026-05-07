@@ -1,39 +1,109 @@
-import { SxProps, Theme } from "@mui/material";
 import { COLORS } from "@constants/colors";
 
 const styles = {
-  container: {
-    minHeight: "80vh",
+  section: {
+    width: "100vw",
+    marginLeft: "calc(-50vw + 50%)",
+    minHeight: "calc(100vh - 80px)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    px: 3,
-  } as SxProps,
+    background: COLORS.background.gradient,
+  },
 
-  stack: {
-    textAlign: "center",
-    maxWidth: "700px",
-  } as SxProps,
+  content: {
+    width: "100%",
+    maxWidth: "1440px",
+    mx: "auto",
+    px: { xs: 2, sm: 3, md: 4, lg: 6 },
+    display: "flex",
+    flexDirection: "column",
+    alignItems: {
+      xs: "center",
+      md: "flex-start",
+    },
+
+    justifyContent: "center",
+    textAlign: {
+      xs: "center",
+      md: "left",
+    },
+
+    py: {
+      xs: 10,
+      md: 0,
+    },
+  },
+
+  availabilityContainer: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 1,
+    px: 2,
+    py: 1,
+    mb: 3,
+    borderRadius: "999px",
+    backgroundColor: "rgba(255,255,255,0.05)",
+    border: "1px solid rgba(255,255,255,0.08)",
+  },
+
+  availabilityDot: {
+    width: 8,
+    height: 8,
+    borderRadius: "50%",
+    backgroundColor: "#22C55E",
+  },
+
+  availabilityText: {
+    fontSize: "0.9rem",
+    color: COLORS.text.secondary,
+  },
 
   title: {
-    fontWeight: "bold",
-  } as SxProps,
+    fontFamily: "Playfair Display, serif",
+    fontWeight: 700,
+    lineHeight: 1.1,
+    color: COLORS.text.primary,
+    mb: 3,
+    maxWidth: "900px",
+    fontSize: {
+      xs: "2.8rem",
+      sm: "4rem",
+      md: "5.5rem",
+      lg: "6.5rem",
+    },
+  },
 
-  name: {
+  highlight: {
     color: COLORS.primary.main,
-  } as SxProps,
-
-  role: {
-    color: COLORS.text.secondary,
-  } as SxProps,
+  },
 
   description: {
+    maxWidth: "720px",
     color: COLORS.text.secondary,
-  } as SxProps,
+    lineHeight: 1.9,
+    mb: 5,
+    fontSize: {
+      xs: "1rem",
+      md: "1.1rem",
+    },
+  },
 
-  actions: {
-    justifyContent: "center",
-  } as SxProps,
+  buttonsContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: 2,
+
+    justifyContent: {
+      xs: "center",
+      md: "flex-start",
+    },
+
+    flexDirection: {
+      xs: "column",
+      sm: "row",
+    },
+  },
 };
 
 export default styles;

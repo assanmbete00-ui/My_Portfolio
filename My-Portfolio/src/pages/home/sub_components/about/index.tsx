@@ -1,55 +1,66 @@
-import { Box, Typography, Stack } from "@mui/material";
-
+import { Box } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { motion } from "framer-motion";
+import Container from "@components/container";
+import Button from "@components/button";
+import SectionTitle from "@components/sectionTitle";
 import styles from "./styles";
-import skills from "./skills";
+import profileImage from "@assets/profils/profil1.jpeg";
 
 export default function About() {
   return (
-    <Box sx={styles.container}>
-      <Box sx={styles.content}>
-  
-        <Typography variant="h4" sx={styles.title}>
-          À propos de moi
-        </Typography>
-
-        <Typography sx={{ ...styles.text, mt: 2 }} textAlign="center">
-          Je suis un développeur passionné spécialisé dans la création
-          d’applications web modernes avec React, TypeScript et MUI. J’aime
-          concevoir des interfaces propres, performantes et maintenables.
-        </Typography>
-
-        <Box sx={styles.grid}>
-
-          <Box sx={styles.gridItem}>
-            <Box sx={styles.card}>
-              <Typography variant="h6" fontWeight="bold">
-                🎯 Objectif
-              </Typography>
-
-              <Typography sx={{ ...styles.text, mt: 1 }}>
-                Construire des applications performantes, évolutives et offrir
-                une excellente expérience utilisateur.
-              </Typography>
-            </Box>
+    <Box
+      component="section"
+      sx={styles.section}
+    >
+      <Container>
+        <Box sx={styles.container}>
+          {/* IMAGE */}
+          <Box
+            component={motion.div}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            sx={styles.imageContainer}
+          >
+            <Box
+              component="img"
+              src={profileImage}
+              alt="profile"
+              sx={styles.image}
+            />
           </Box>
 
-          <Box sx={styles.gridItem}>
-            <Box sx={styles.card}>
-              <Typography variant="h6" fontWeight="bold">
-                🧠 Compétences
-              </Typography>
+          {/* CONTENT */}
+          <Box
+            component={motion.div}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            sx={styles.content}
+          >
+            <SectionTitle
+              subtitle="À PROPOS"
+              title={`Un développeur avec un œil d’éditeur.`}
+              description={`Huit ans à construire des logiciels en production dans la fintech, 
+             la santé et les outils créatifs. J'attache une importance particulière à une 
+             architecture propre, à des interfaces apaisées et à un travail qui tient dans le temps.`}
+            />
 
-              <Stack sx={styles.skillsContainer}>
-                {skills.map((skill) => (
-                  <Box key={skill} sx={styles.skillItem}>
-                    {skill}
-                  </Box>
-                ))}
-              </Stack>
-            </Box>
+            {/* BUTTON */}
+            <Button
+              customVariant="contained"
+              sx={styles.button}
+            >
+              En savoir plus
+
+              <ArrowForwardIcon sx={styles.icon} />
+            </Button>
           </Box>
         </Box>
-      </Box>
+      </Container>
     </Box>
   );
 }

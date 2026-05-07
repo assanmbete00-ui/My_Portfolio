@@ -2,7 +2,7 @@ import type { RouteObject } from "react-router-dom";
 
 import ErrorPage from "@pages/error";
 import Home from "@pages/home";
-import About from "@pages/about";
+//import About from "@pages/about";
 
 import { MainPageContextProvider } from "@contexts/page_contexts/main_page_context";
 
@@ -18,6 +18,7 @@ const mainNavigation: RouteObject[] = [
         bgColor="secondary"
         HeaderComponent={Header}
         ContextProvider={MainPageContextProvider}
+        //FooterComponent={Footer}
       />
     ),
     errorElement: <ErrorPage />,
@@ -28,12 +29,12 @@ const mainNavigation: RouteObject[] = [
         element: <Home />,
       },
 
-      {
+     {/* {
         path: "about",
-        element: <About />,
-      },
+        element:<About />,
+      }, */}
     ],
   },
-];
+]; 
 
 export default mainNavigation;

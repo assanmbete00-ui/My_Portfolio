@@ -1,64 +1,69 @@
-import { Box, Typography, Stack } from "@mui/material"
-import { motion } from "framer-motion"
-import CustumButton from "@components/button"
-
-import styles from "./styles"
-import SectionTitle from "@components/sectionTitle"
-import { useNavigate } from "react-router-dom"
+import { Box, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+//import Container from "@components/container";
+import Button from "@components/button";
+import styles from "./styles";
 
 export default function Hero() {
-  const navigate = useNavigate();
-
-  const handleNavigate = (path: string) => {
-    navigate(path);
-  };
   return (
-    <Box sx={styles.container}>
-      <Stack spacing={3} sx={styles.stack}>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
+    <Box component="section" sx={styles.section}>
+      <Box sx={styles.content}>
+        {/* AVAILABILITY */}
+        <Box
+          component={motion.div}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          sx={styles.availabilityContainer}
         >
-          <Typography variant="h2" sx={styles.title}>
-            Salut 👋, je suis{" "}
-            <Box component="span" sx={styles.name}>
-              Assan
-            </Box>
+          <Box sx={styles.availabilityDot} />
+
+          <Typography sx={styles.availabilityText}>
+            Disponible pour de nouveaux projets
           </Typography>
-        </motion.div>
+        </Box>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+        <Typography
+          component={motion.h1}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          sx={styles.title}
         >
-          <SectionTitle >
-            Développeur React • TypeScript • MUI
-          </SectionTitle>
-        </motion.div>
-
-        <Typography sx={styles.description}>
-          Je construis des applications web modernes, performantes et scalables
-          avec une architecture propre et maintenable.
+          Bonjour, je suis Assan. <br />
+          Full-Stack
+          <br />
+          <Box component="span" sx={styles.highlight}>
+            Developer
+          </Box>
         </Typography>
 
-        <Stack direction="row" spacing={2} sx={styles.actions}>
-          <CustumButton  
-          onClick={() => handleNavigate("/projects")}
-          >
-            Voir mes projets
-          </CustumButton>
+        <Typography
+          component={motion.p}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.9,
+          }}
+          sx={styles.description}
+        >
+          Je conçois des produits web rapides, accessibles et soignés jusqu'au
+          moindre détail.
+        </Typography>
 
-          <CustumButton  
-          onClick={() => handleNavigate("/contact")}
-          >
-            Contactez-moi
-          </CustumButton>
-        </Stack>
-
-      </Stack>
+        <Box
+          component={motion.div}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1,
+          }}
+          sx={styles.buttonsContainer}
+        >
+          <Button customVariant="contained">Voir mes projets</Button>
+          <Button customVariant="outlined">Me contacter</Button>
+        </Box>
+      </Box>
     </Box>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { createTheme } from "@mui/material/styles"
-import { COLORS } from "../colors";  
+import { createTheme } from "@mui/material/styles";
+import { COLORS } from "../colors";
 
 export const theme = createTheme({
   palette: {
@@ -7,10 +7,14 @@ export const theme = createTheme({
 
     primary: {
       main: COLORS.primary.main,
+      light: COLORS.primary.light,
+      dark: COLORS.primary.dark,
     },
 
     secondary: {
       main: COLORS.secondary.main,
+      light: COLORS.secondary.light,
+      dark: COLORS.secondary.dark,
     },
 
     background: {
@@ -22,23 +26,33 @@ export const theme = createTheme({
       primary: COLORS.text.primary,
       secondary: COLORS.text.secondary,
     },
+
+    divider: COLORS.divider,
   },
 
   typography: {
-    fontFamily: "Poppins, sans-serif",
+    fontFamily: "Inter, sans-serif",
 
     h1: {
-      fontSize: "3rem",
-      fontWeight: 700,
+      fontFamily: "Playfair Display, serif",
+      fontSize: "3.5rem",
+      fontWeight: 600,
     },
 
     h2: {
-      fontSize: "2.2rem",
+      fontFamily: "Playfair Display, serif",
+      fontSize: "2.5rem",
       fontWeight: 600,
     },
 
     body1: {
       fontSize: "1rem",
+      color: COLORS.text.secondary,
+    },
+
+    button: {
+      textTransform: "none",
+      fontWeight: 500,
     },
   },
 
@@ -50,10 +64,18 @@ export const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: "none",
-          borderRadius: 8,
+          borderRadius: 10,
+          padding: "10px 20px",
+        },
+      },
+    },
+
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundImage: "none",
         },
       },
     },
   },
-})
+});

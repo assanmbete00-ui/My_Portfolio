@@ -1,65 +1,80 @@
-import { SxProps, Theme } from "@mui/material";
+import type { Theme } from "@mui/material/styles";
+//import { COLORS } from "@constants/colors";
 
 const styles = {
+  section: {
+    width: "100%",
+    //backgroundColor: COLORS.background.default,
+    py: {
+      xs: 10,
+      md: 16,
+    },
+  },
+
   container: {
-    padding: "64px 16px",
     display: "flex",
-    justifyContent: "center",
-  } as SxProps<Theme>,
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: {
+      xs: "column",
+      md: "row",
+    },
+
+    gap: {
+      xs: 8,
+      md: 10,
+    },
+  },
+
+  imageContainer: (theme: Theme) => ({
+    flex: 1,
+    width: "100%",
+    maxWidth: "520px",
+    borderRadius: "24px",
+    overflow: "hidden",
+    [theme.breakpoints.down("md")]: {
+      maxWidth: "100%",
+    },
+  }),
+
+  image: {
+    width: "100%",
+    height: "100%",
+    display: "block",
+    objectFit: "cover",
+  },
 
   content: {
-    maxWidth: "1100px",
-    width: "100%",
-  } as SxProps<Theme>,
-
-  grid: {
-    marginTop: "32px",
+    flex: 1,
+    maxWidth: "520px",
     display: "flex",
-    flexDirection: { xs: "column", md: "row" },
-    gap: 3,
-  } as SxProps<Theme>,
+    flexDirection: "column",
+    alignItems: {
+      xs: "center",
+      md: "flex-start",
+    },
+  },
 
-  gridItem: {
-    flex: { xs: "1", md: "1 1 50%" },
-  } as SxProps<Theme>,
-
-  title: {
-    fontWeight: 700,
-    textAlign: "center",
-  } as SxProps<Theme>,
-
-  text: {
-    color: "text.secondary",
-    lineHeight: 1.7,
-  } as SxProps<Theme>,
-
-  card: {
-    padding: "24px",
-    borderRadius: 3,
-    backgroundColor: "background.paper",
-    border: "1px solid",
-    borderColor: "divider",
-    transition: "0.3s",
+  button: {
+    minWidth: 170,
+    py: 1.5,
+    px: 3,
+    borderRadius: "12px",
+    backgroundColor: "#0F5D6C",
+    fontWeight: 600,
+    textTransform: "none",
+    boxShadow: "none",
 
     "&:hover": {
-      transform: "translateY(-5px)",
+      backgroundColor: "#0C4A57",
+      boxShadow: "none",
     },
-  } as SxProps<Theme>,
+  },
 
-  skillItem: {
-    padding: "6px 12px",
-    borderRadius: "20px",
-    backgroundColor: "#1976d2",
-    color: "#fff",
-    fontSize: "0.8rem",
-  } as SxProps<Theme>,
-
-  skillsContainer: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 1,
-    marginTop: "10px",
-  } as SxProps<Theme>,
+  icon: {
+    ml: 1,
+    fontSize: "1rem",
+  },
 };
 
 export default styles;

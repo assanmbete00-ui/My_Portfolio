@@ -1,13 +1,6 @@
-import { NavItem } from "./types"
-
-
-const navItems: NavItem[] = [
-  { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
-  { label: "Cv", path: "/cv" },
-  { label: "Projects", path: "/projects" },
-  { label: "Contact", path: "/contact" },
-]
-
-
-export default navItems
+export const navLinks = [
+  { label: "Accueil", path: "/"},
+  { label: "À propos", path: "/about",},
+  { label: "CV", path: "/cv" },
+  { label: "Contact", path: "/contact"}
+];
