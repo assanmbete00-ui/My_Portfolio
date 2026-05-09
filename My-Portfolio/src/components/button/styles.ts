@@ -10,7 +10,7 @@ const styles = {
     boxShadow: "none",
 
     "&:hover": {
-      backgroundColor: COLORS.primary.dark,
+      backgroundColor: COLORS.primary.light,
       boxShadow: "none",
     },
   },

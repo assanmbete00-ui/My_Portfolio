@@ -8,4 +8,8 @@ const router: RouteObject[] = []
 router.push(...mainNavigation)
 // router.push(...AdminNavigation)
 
-export default createBrowserRouter(router)
+const basename = process.env.PUBLIC_URL || "/My_Portfolio";
+
+export default createBrowserRouter(router, {
+  basename,
+})

@@ -1,15 +1,31 @@
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import HttpBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 
+// Ressources de traduction intégrées
+const resources = {
+  en: {
+    translation: {
+      // Traductions par défaut en anglais
+    },
+  },
+  fr: {
+    translation: {
+      // Traductions par défaut en français
+    },
+  },
+};
+
 i18n
-  .use(HttpBackend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: "en",
+    resources,
+    fallbackLng: "fr",
     debug: false,
+    interpolation: {
+      escapeValue: false,
+    },
   });
 
 export default i18n;

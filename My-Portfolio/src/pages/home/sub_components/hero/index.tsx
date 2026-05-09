@@ -8,7 +8,6 @@ export default function Hero() {
   return (
     <Box component="section" sx={styles.section}>
       <Box sx={styles.content}>
-        {/* AVAILABILITY */}
         <Box
           component={motion.div}
           initial={{ opacity: 0, y: 20 }}

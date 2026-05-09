@@ -14,6 +14,8 @@ export const COLORS = {
   background: {
     default: "#0F172A",
     paper: "#111827",
+    header: "#e5e9ee",
+    footer: "#e5e9ee",
     gradient: `
       linear-gradient(
         135deg,

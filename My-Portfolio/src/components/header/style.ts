@@ -3,7 +3,7 @@ import { COLORS } from "@constants/colors";
 
 const styles = {
   appBar: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: COLORS.background.header,
     boxShadow: "none",
     borderBottom: "1px solid #F3F4F6",
   },

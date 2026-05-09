@@ -8,7 +8,7 @@ import { MainPageContextProvider } from "@contexts/page_contexts/main_page_conte
 
 import MainLayout from "@layouts/main_layout";
 import Header from "@components/header";
-//import Footer from "@components/footer"
+import Footer from "@components/footer"
 
 const mainNavigation: RouteObject[] = [
   {
@@ -18,7 +18,7 @@ const mainNavigation: RouteObject[] = [
         bgColor="secondary"
         HeaderComponent={Header}
         ContextProvider={MainPageContextProvider}
-        //FooterComponent={Footer}
+        FooterComponent={Footer}
       />
     ),
     errorElement: <ErrorPage />,
