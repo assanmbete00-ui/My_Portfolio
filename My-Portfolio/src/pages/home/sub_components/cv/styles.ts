@@ -25,21 +25,15 @@ const styles = {
 
   blockHeader: {
     display: "flex",
-
     alignItems: "center",
-
     justifyContent: "space-between",
-
     mb: 4,
   },
 
   blockTitle: {
     fontFamily: "Playfair Display, serif",
-
     fontWeight: 700,
-
     color: COLORS.text.auther,
-
     fontSize: {
       xs: "1.6rem",
       md: "2rem",
@@ -48,17 +42,13 @@ const styles = {
 
   viewAll: {
     color: COLORS.primary.main,
-
     fontWeight: 600,
-
     cursor: "pointer",
-
     fontSize: "0.95rem",
   },
 
   grid: {
     display: "grid",
-
     gridTemplateColumns: {
       xs: "1fr",
       sm: "1fr 1fr",

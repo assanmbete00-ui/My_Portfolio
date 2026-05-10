@@ -83,7 +83,7 @@ const styles = {
     borderTop: "1px solid #E5E7EB",
     py: 3,
     textAlign: "center",
-  },
+  }, 
 
   copyright: {
     color: COLORS.text.secondary,

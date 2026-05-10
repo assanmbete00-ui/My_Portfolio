@@ -3,8 +3,7 @@ import { COLORS } from "@constants/colors";
 const styles = {
   section: {
     width: "100%",
-    background:
-      "linear-gradient(135deg, #111827 0%, #1A2238 100%)",
+    background: "linear-gradient(135deg, #111827 0%, #1A2238 100%)",
 
     py: {
       xs: 10,
@@ -15,8 +14,11 @@ const styles = {
   },
 
   container: {
-    maxWidth: "900px",
-    margin: "0 auto",
+    // Supprimé maxWidth pour utiliser pleinement la largeur du Container parent
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   subtitle: {
@@ -46,7 +48,6 @@ const styles = {
     lineHeight: 1.8,
     maxWidth: "700px",
     margin: "0 auto",
-
     mb: 5,
 
     fontSize: {
@@ -54,8 +55,6 @@ const styles = {
       md: "1.15rem",
     },
   },
-
-
 };
 
 export default styles;

@@ -50,7 +50,6 @@ export default function Footer() {
         </Box>
       </Container>
 
-      {/* BOTTOM */}
       <Box sx={styles.bottom}>
         <Typography sx={styles.copyright}>
           © 2026 Assan Mbete. Conçu avec soin.

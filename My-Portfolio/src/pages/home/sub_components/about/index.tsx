@@ -15,7 +15,6 @@ export default function About() {
     >
       <Container>
         <Box sx={styles.container}>
-          {/* IMAGE */}
           <Box
             component={motion.div}
             initial={{ opacity: 0, x: -40 }}
@@ -32,7 +31,6 @@ export default function About() {
             />
           </Box>
 
-          {/* CONTENT */}
           <Box
             component={motion.div}
             initial={{ opacity: 0, x: 40 }}

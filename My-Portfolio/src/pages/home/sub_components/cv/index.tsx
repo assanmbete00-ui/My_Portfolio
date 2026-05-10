@@ -1,7 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-//import Container from "@components/container";
+import Container from "@components/container";
 import SectionTitle from "@components/sectionTitle";
+import Button from "@components/button";
 import ResumeCard from "@components/resumCard";
 import { educationData, experienceData, projectData } from "./data";
 import styles from "./styles";
@@ -10,19 +11,19 @@ export default function Cv() {
   return (
     <Box component="section" sx={styles.section}>
       <Box sx={styles.content}>
-        {/* SECTION TITLE */}
         <SectionTitle
           subtitle="TRAVAUX CHOISIS"
           title="Un aperçu du parcours."
           description="Quelques moments forts : études, studios où j'ai travaillé et projets que j'ai construits."
         />
 
-        {/* EDUCATION */}
         <Box sx={styles.block}>
           <Box sx={styles.blockHeader}>
             <Typography sx={styles.blockTitle}>Parcours</Typography>
 
-            <Typography sx={styles.viewAll}>Tout voir</Typography>
+            <Button customVariant="text" sx={styles.viewAll}>
+              Tout voir
+            </Button>
           </Box>
 
           <Box sx={styles.grid}>
@@ -55,12 +56,15 @@ export default function Cv() {
           </Box>
         </Box>
 
-        {/* EXPERIENCE */}
         <Box sx={styles.block}>
           <Box sx={styles.blockHeader}>
-            <Typography sx={styles.blockTitle}>Expérience</Typography>
+            <Button customVariant="text" sx={styles.blockTitle}>
+              Expérience
+              </Button>
 
-            <Typography sx={styles.viewAll}>Tout voir</Typography>
+            <Button customVariant="text" sx={styles.viewAll}>
+              Tout voir
+            </Button>
           </Box>
 
           <Box sx={styles.grid}>
@@ -93,12 +97,13 @@ export default function Cv() {
           </Box>
         </Box>
 
-        {/* PROJECTS */}
         <Box sx={styles.block}>
           <Box sx={styles.blockHeader}>
             <Typography sx={styles.blockTitle}>Projets</Typography>
 
-            <Typography sx={styles.viewAll}>Tout voir</Typography>
+             <Button customVariant="text" sx={styles.viewAll}>
+              Tout voir
+             </Button>
           </Box>
 
           <Box sx={styles.grid}>
