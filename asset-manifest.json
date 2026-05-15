@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/My_Portfolio/static/js/main.bb6f9568.js",
+    "main.js": "/My_Portfolio/static/js/main.5b741bad.js",
     "static/media/artisant.jpg": "/My_Portfolio/static/media/artisant.471ef6c530803b078251.jpg",
     "static/media/formation.jpg": "/My_Portfolio/static/media/formation.9681ce71bc4e47c521e3.jpg",
     "static/media/chefferie.png": "/My_Portfolio/static/media/chefferie.4247ef0268b4228be6f6.png",
@@ -12,13 +12,15 @@
     "static/media/labo1.png": "/My_Portfolio/static/media/labo1.704b49a0fc9ddfd592b9.png",
     "static/media/me.png": "/My_Portfolio/static/media/me.8477547e055e4e7c6f3b.png",
     "static/media/labo4.png": "/My_Portfolio/static/media/labo4.96ad6e52aeb374516cf3.png",
+    "static/media/sensibli.jpeg": "/My_Portfolio/static/media/sensibli.7352fe1c14f5c5a3950b.jpeg",
+    "static/media/lookgoog.jpeg": "/My_Portfolio/static/media/lookgoog.85629f7aa764eba00aa8.jpeg",
     "static/media/profil1.jpeg": "/My_Portfolio/static/media/profil1.b626b7f5f0ff908628e3.jpeg",
     "static/media/lapnombapay.png": "/My_Portfolio/static/media/lapnombapay.58c473f198f54f706a39.png",
     "static/media/profil0.jpeg": "/My_Portfolio/static/media/profil0.ceca47b5e722cae72f3d.jpeg",
     "index.html": "/My_Portfolio/index.html",
-    "main.bb6f9568.js.map": "/My_Portfolio/static/js/main.bb6f9568.js.map"
+    "main.5b741bad.js.map": "/My_Portfolio/static/js/main.5b741bad.js.map"
   },
   "entrypoints": [
-    "static/js/main.bb6f9568.js"
+    "static/js/main.5b741bad.js"
   ]
 }
