@@ -1,10 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import Container from "@components/container";
 import SectionTitle from "@components/sectionTitle";
 import Button from "@components/button";
 import ResumeCard from "@components/resumCard";
 import { educationData, experienceData, projectData } from "./data";
+import { Link as RouterLink } from "react-router-dom";
 import styles from "./styles";
 
 export default function Cv() {
@@ -21,7 +21,12 @@ export default function Cv() {
           <Box sx={styles.blockHeader}>
             <Typography sx={styles.blockTitle}>Parcours</Typography>
 
-            <Button customVariant="text" sx={styles.viewAll}>
+            <Button
+              customVariant="text"
+              sx={styles.viewAll}
+              component={RouterLink}
+              to="/cv"
+            >
               Tout voir
             </Button>
           </Box>
@@ -40,7 +45,7 @@ export default function Cv() {
                   y: 0,
                 }}
                 transition={{
-                  duration: 0.7,
+                  duration: 0.5,
                   delay: index * 0.2,
                 }}
                 viewport={{ once: true }}
@@ -58,11 +63,13 @@ export default function Cv() {
 
         <Box sx={styles.block}>
           <Box sx={styles.blockHeader}>
-            <Button customVariant="text" sx={styles.blockTitle}>
-              Expérience
-              </Button>
-
-            <Button customVariant="text" sx={styles.viewAll}>
+            <Typography sx={styles.blockTitle}>Expérience</Typography>
+            <Button
+              customVariant="text"
+              sx={styles.viewAll}
+              component={RouterLink}
+              to="/cv"
+            >
               Tout voir
             </Button>
           </Box>
@@ -81,7 +88,7 @@ export default function Cv() {
                   y: 0,
                 }}
                 transition={{
-                  duration: 0.7,
+                  duration: 0.5,
                   delay: index * 0.2,
                 }}
                 viewport={{ once: true }}
@@ -101,9 +108,14 @@ export default function Cv() {
           <Box sx={styles.blockHeader}>
             <Typography sx={styles.blockTitle}>Projets</Typography>
 
-             <Button customVariant="text" sx={styles.viewAll}>
+            <Button
+              customVariant="text"
+              sx={styles.viewAll}
+              component={RouterLink}
+              to="/cv"
+            >
               Tout voir
-             </Button>
+            </Button>
           </Box>
 
           <Box sx={styles.grid}>
@@ -120,7 +132,7 @@ export default function Cv() {
                   y: 0,
                 }}
                 transition={{
-                  duration: 0.7,
+                  duration: 0.5,
                   delay: index * 0.2,
                 }}
                 viewport={{ once: true }}

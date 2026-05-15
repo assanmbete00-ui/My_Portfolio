@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 //import Container from "@components/container";
 import Button from "@components/button";
 import styles from "./styles";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -59,8 +60,12 @@ export default function Hero() {
           }}
           sx={styles.buttonsContainer}
         >
-          <Button customVariant="contained">Voir mes projets</Button>
-          <Button customVariant="outlined">Me contacter</Button>
+          <Button customVariant="contained" component={RouterLink} to="/cv">
+            Voir mes projets
+          </Button>
+          <Button customVariant="outlined" component={RouterLink} to="/contact">
+            Me contacter
+          </Button>
         </Box>
       </Box>
     </Box>

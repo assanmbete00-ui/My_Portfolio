@@ -2,13 +2,15 @@ import type { RouteObject } from "react-router-dom";
 
 import ErrorPage from "@pages/error";
 import Home from "@pages/home";
-//import About from "@pages/about";
+import About from "@pages/about";
+import Cv from "@pages/cv";
+import Contact from "@pages/contact";
 
 import { MainPageContextProvider } from "@contexts/page_contexts/main_page_context";
 
 import MainLayout from "@layouts/main_layout";
 import Header from "@components/header";
-import Footer from "@components/footer"
+import Footer from "@components/footer";
 
 const mainNavigation: RouteObject[] = [
   {
@@ -29,12 +31,20 @@ const mainNavigation: RouteObject[] = [
         element: <Home />,
       },
 
-     {/* {
+      {
         path: "about",
-        element:<About />,
-      }, */}
+        element: <About />,
+      },
+      {
+        path: "cv",
+        element: <Cv />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
     ],
   },
-]; 
+];
 
 export default mainNavigation;

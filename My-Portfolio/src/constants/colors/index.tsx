@@ -6,7 +6,7 @@ export const COLORS = {
   },
 
   secondary: {
-    main: "#F9FAFB",
+    main: "#fff",
     light: "#14B8A6",
     dark: "#115E59",
   },

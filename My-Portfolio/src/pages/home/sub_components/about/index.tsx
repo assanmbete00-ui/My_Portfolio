@@ -6,13 +6,11 @@ import Button from "@components/button";
 import SectionTitle from "@components/sectionTitle";
 import styles from "./styles";
 import profileImage from "@assets/profils/profil1.jpeg";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function About() {
   return (
-    <Box
-      component="section"
-      sx={styles.section}
-    >
+    <Box component="section" sx={styles.section}>
       <Container>
         <Box sx={styles.container}>
           <Box
@@ -41,19 +39,21 @@ export default function About() {
           >
             <SectionTitle
               subtitle="À PROPOS"
-              title={`Un développeur avec un œil d’éditeur.`}
-              description={`Huit ans à construire des logiciels en production dans la fintech, 
-             la santé et les outils créatifs. J'attache une importance particulière à une 
-             architecture propre, à des interfaces apaisées et à un travail qui tient dans le temps.`}
+              title={`Je conçois des expériences web qui font la différence.`}
+              description={`Ingénieur en génie logiciel et développeur fullstack, 
+                je transforme des idées en applications modernes, performantes et 
+                centrées sur l’utilisateur. À travers ce portfolio, découvrez mon p
+                arcours, mes projets et mes experiences.`}
             />
 
             {/* BUTTON */}
             <Button
               customVariant="contained"
               sx={styles.button}
+              component={RouterLink}
+              to="/about"
             >
               En savoir plus
-
               <ArrowForwardIcon sx={styles.icon} />
             </Button>
           </Box>

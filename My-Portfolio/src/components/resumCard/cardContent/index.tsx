@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import Button from "@components/button";
+import { Link as RouterLink } from "react-router-dom";
 import styles from "./styles";
 
 type CardContentProps = {
@@ -23,7 +24,7 @@ export default function CardContent({ period, title, description }: CardContentP
       </Typography>
       <Button
         customVariant="text"
-        sx={styles.button}
+        sx={styles.button} component={RouterLink} to="/cv"
       >
         Learn more
         <NorthEastIcon sx={styles.icon} />

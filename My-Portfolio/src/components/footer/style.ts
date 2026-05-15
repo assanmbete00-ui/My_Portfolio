@@ -36,9 +36,7 @@ const styles = {
 
   description: {
     color: COLORS.text.secondary,
-
     lineHeight: 1.8,
-
     maxWidth: "320px",
   },
 

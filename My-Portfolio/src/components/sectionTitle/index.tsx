@@ -1,33 +1,40 @@
 import { Box, Typography } from "@mui/material";
+import type { SxProps, Theme } from "@mui/material/styles";
 import styles from "./styles";
 
 type SectionTitleProps = {
   subtitle?: string;
   title: string;
   description?: string;
+  titleColor?: string;
+  sx?: SxProps<Theme>;
 };
 
 export default function SectionTitle({
   subtitle,
   title,
   description,
+  titleColor,
+  sx,
 }: SectionTitleProps) {
-  return (
-    <Box sx={styles.container}>
-      {subtitle && (
-        <Typography sx={styles.subtitle}>
-          {subtitle}
-        </Typography>
-      )}
+  const mergedSx = (
+    sx
+      ? [styles.container, ...(Array.isArray(sx) ? sx : [sx])]
+      : styles.container
+  ) as SxProps<Theme>;
 
-      <Typography sx={styles.title}>
+  return (
+    <Box sx={mergedSx}>
+      {subtitle && <Typography sx={styles.subtitle}>{subtitle}</Typography>}
+
+      <Typography
+        sx={titleColor ? [styles.title, { color: titleColor }] : styles.title}
+      >
         {title}
       </Typography>
 
       {description && (
-        <Typography sx={styles.description}>
-          {description}
-        </Typography>
+        <Typography sx={styles.description}>{description}</Typography>
       )}
     </Box>
   );

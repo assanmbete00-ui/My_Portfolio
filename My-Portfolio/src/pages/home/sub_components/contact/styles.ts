@@ -13,14 +13,6 @@ const styles = {
     textAlign: "center",
   },
 
-  container: {
-    // Supprimé maxWidth pour utiliser pleinement la largeur du Container parent
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
   subtitle: {
     color: COLORS.primary.main,
     fontWeight: 700,

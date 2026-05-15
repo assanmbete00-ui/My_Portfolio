@@ -17,11 +17,11 @@ export default function Hero() {
           >
             <Box sx={styles.SectionTitle}>
             <SectionTitle 
-              subtitle="Contact"
-              title={`Construisons quelque chose qui mérite d'exister.`}
+              subtitle="Curriculum Vitæ"
+              title={`La version longue, soigneusement organisée.`}
               titleColor="#fff"
-              description={`Écrivez un mot sur votre projet, posez une question, 
-                ou venez simplement dire bonjour.`}
+              description={`Écoles fréquentées, équipes rejointes et projets livrés. 
+                Chaque entrée se développe avec détails et liens.`}
             />
             </Box>
           </Box>
