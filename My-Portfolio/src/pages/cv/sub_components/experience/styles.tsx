@@ -4,7 +4,7 @@ const styles = {
   section: {
     width: "100vw",
     marginLeft: "calc(-50vw + 50%)",
-    backgroundColor: "#e5e9ee",
+   // backgroundColor: "#e5e9ee",
 
     py: {
       xs: 10,

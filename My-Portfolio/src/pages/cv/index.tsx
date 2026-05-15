@@ -1,7 +1,7 @@
 import Hero from "./sub_components/hero";
-//import Experience from "./sub_components/experience";
-//import Education from "./sub_components/education";
-//import Skills from "./sub_components/skills";
+import Education from "./sub_components/educations";
+import Experience from "./sub_components/experience";
+import Project from "./sub_components/projects";
 
 
 
@@ -9,9 +9,9 @@ export default function CV() {
   return (
     <>
       <Hero />
-      {/* <Experience /> */}
-      {/* <Education /> */}
-      {/* <Skills /> */}
+      <Education /> 
+      <Experience /> 
+      <Project /> 
     </>
   );
 }

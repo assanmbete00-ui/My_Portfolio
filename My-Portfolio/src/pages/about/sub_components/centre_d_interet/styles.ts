@@ -7,7 +7,7 @@ const styles = {
       md: 12,
     },
 
-    backgroundColor: COLORS.background.footer,
+   // backgroundColor: COLORS.background.footer,
   },
 
   grid: {
@@ -23,14 +23,15 @@ const styles = {
   },
 
   card: {
-    backgroundColor: "#fff",
+    backgroundColor: COLORS.background.footer,
     borderRadius: "14px",
+    border: "1px solid rgba(15, 23, 42, 0.08)",
+
     px: 3,
     py: 3,
     transition: "0.3s",
 
     "&:hover": {
-      transform: "translateY(-4px)",
        border: COLORS.primary.main,
     },
   },

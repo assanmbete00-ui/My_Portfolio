@@ -2,8 +2,13 @@ import { COLORS } from "@constants/colors";
 
 const styles = {
   section: {
-    width: "100%",
-    background: "linear-gradient(135deg, #111827 0%, #1A2238 100%)",
+    width: "100vw",
+    marginLeft: "calc(-50vw + 50%)",
+    minHeight: "calc(100vh - 80px)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: COLORS.background.gradient,
 
     py: {
       xs: 10,

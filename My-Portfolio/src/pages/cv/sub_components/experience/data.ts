@@ -1,6 +1,6 @@
 import formation from "@assets/experience/formation.jpg";
 import artisant from "@assets/experience/artisant.jpg";
-import lapnombapay from "@assets/experiencelapnombapay.png";
+import lapnombapay from "@assets/experience/lapnombapay.png";
 
 export const experienceData = [
   {

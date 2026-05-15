@@ -3,23 +3,22 @@ import { motion } from "framer-motion";
 import SectionTitle from "@components/sectionTitle";
 //import Button from "@components/button";
 import ResumeCard from "@components/resumCard";
-import { educationData } from "./data";
+import { experienceData } from "./data";
 //import { Link as RouterLink } from "react-router-dom";
 import styles from "./styles";
 
-export default function Education() {
+export default function Experience() {
   return (
     <Box component="section" sx={styles.section}>
       <Box sx={styles.content}>
         <SectionTitle
-          subtitle="1- PARCOURS"
-          title="Formation."
+          subtitle="2- EXPÉRIENCE"
+          title="Expérience professionnelle."
         />
-
-        <Box sx={styles.block}>
-
+          <Box sx={styles.block}>
+         
           <Box sx={styles.grid}>
-            {educationData.map((item, index) => (
+            {experienceData.map((item, index) => (
               <Box
                 key={item.id}
                 component={motion.div}

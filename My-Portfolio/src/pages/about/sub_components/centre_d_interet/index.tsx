@@ -5,10 +5,11 @@ import SectionTitle from "@components/sectionTitle";
 import styles from "./styles";
 
 const interests = [
-  "Typographie & mise en page éditoriale",
-  "Course longue distance",
-  "Claviers mécaniques",
-  "Photographie argentique",
+  "Technologies émergentes",
+  "Design d’interfaces et expérience utilisateur",
+  "Voyages et découvertes culturelles",
+  "Football et sports en général",
+  "Cuisine et gastronomie",
 ];
 
 const MotionBox = motion(Box);
