@@ -9,9 +9,9 @@ type Props = {
 
   loading: boolean;
 
-  onChange: (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => void;
+  disabled: boolean;
+
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 
   onSubmit: () => void;
 };
@@ -19,23 +19,23 @@ type Props = {
 export default function FormFields({
   formData,
   loading,
+  disabled,
   onChange,
   onSubmit,
 }: Props) {
   return (
-    <>
-      <Typography sx={styles.title}>
-        Envoyer un message
-      </Typography>
+    <Box
+      component="form"
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit();
+      }}
+    >
+      <Typography sx={styles.title}>Envoyer un message</Typography>
 
-      <Stack
-        direction={{ xs: "column", md: "row" }}
-        spacing={3}
-      >
+      <Stack direction={{ xs: "column", md: "row" }} spacing={3}>
         <Box sx={{ flex: 1 }}>
-          <Typography sx={styles.label}>
-            Nom
-          </Typography>
+          <Typography sx={styles.label}>Nom</Typography>
 
           <TextField
             fullWidth
@@ -47,9 +47,7 @@ export default function FormFields({
         </Box>
 
         <Box sx={{ flex: 1 }}>
-          <Typography sx={styles.label}>
-            Email
-          </Typography>
+          <Typography sx={styles.label}>Email</Typography>
 
           <TextField
             fullWidth
@@ -62,9 +60,7 @@ export default function FormFields({
       </Stack>
 
       <Box>
-        <Typography sx={styles.label}>
-          Sujet
-        </Typography>
+        <Typography sx={styles.label}>Sujet</Typography>
 
         <TextField
           fullWidth
@@ -76,9 +72,7 @@ export default function FormFields({
       </Box>
 
       <Box>
-        <Typography sx={styles.label}>
-          Message
-        </Typography>
+        <Typography sx={styles.label}>Message</Typography>
 
         <TextField
           fullWidth
@@ -91,15 +85,17 @@ export default function FormFields({
         />
       </Box>
 
-      <CustomButton
-        onClick={onSubmit}
-        disabled={loading}
-        endIcon={<SendOutlined />}
-      >
-        {loading
-          ? "Envoi..."
-          : "Envoyer le message"}
-      </CustomButton>
-    </>
+      <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 4 }}>
+        <CustomButton
+          type="submit"
+          customVariant="contained"
+          disabled={disabled}
+          endIcon={<SendOutlined />}
+          sx={{ width: { xs: "100%", sm: "auto" } }}
+        >
+          {loading ? "Envoi..." : "Envoyer le message"}
+        </CustomButton>
+      </Box>
+    </Box>
   );
 }

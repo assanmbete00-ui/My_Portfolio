@@ -14,8 +14,8 @@ export async function sendEmail({
   message,
 }: SendEmailProps) {
   return emailjs.send(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
+    "service_wj6z599",
+    "template_ye7hnqa",
     {
       from_name: name,
       from_email: email,
@@ -23,6 +23,6 @@ export async function sendEmail({
       message,
       to_email: "Assanmbete00@gmail.com",
     },
-    "YOUR_PUBLIC_KEY"
+    "7rdbSWGc4X8j6YNHH"
   );
 }

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Alert, Box, Snackbar } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState, type ChangeEvent } from "react";
 import Container from "@components/container";
@@ -12,17 +12,25 @@ import styles from "./styles";
 
 const MotionBox = motion(Box);
 
+const emptyFormData: ContactFormData = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+
 export default function ContactForm() {
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
+  const [formData, setFormData] = useState<ContactFormData>(emptyFormData);
   const [loading, setLoading] = useState(false);
-
   const [open, setOpen] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const isFormValid = Boolean(
+    formData.name.trim() &&
+    formData.email.trim() &&
+    formData.subject.trim() &&
+    formData.message.trim(),
+  );
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -34,19 +42,19 @@ export default function ContactForm() {
   const handleSubmit = async () => {
     try {
       setLoading(true);
+      setError(null);
 
       await sendEmail(formData);
 
       setOpen(true);
-
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+      setFormData(emptyFormData);
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      setError(
+        error instanceof Error
+          ? error.message
+          : "Une erreur est survenue lors de l'envoi du message.",
+      );
     } finally {
       setLoading(false);
     }
@@ -76,6 +84,7 @@ export default function ContactForm() {
             <FormFields
               formData={formData}
               loading={loading}
+              disabled={!isFormValid || loading}
               onChange={handleChange}
               onSubmit={handleSubmit}
             />
@@ -106,6 +115,24 @@ export default function ContactForm() {
         </Box>
 
         <SuccessMessage open={open} onClose={() => setOpen(false)} />
+
+        <Snackbar
+          open={Boolean(error)}
+          autoHideDuration={6000}
+          onClose={() => setError(null)}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+        >
+          <Alert
+            severity="error"
+            variant="filled"
+            onClose={() => setError(null)}
+          >
+            {error}
+          </Alert>
+        </Snackbar>
       </Container>
     </Box>
   );
