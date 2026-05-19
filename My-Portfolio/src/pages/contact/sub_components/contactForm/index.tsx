@@ -39,6 +39,36 @@ export default function ContactForm() {
     });
   };
 
+  const getErrorMessage = (error: unknown) => {
+    if (error instanceof Error) {
+      return error.message;
+    }
+
+    if (typeof error === "string") {
+      return error;
+    }
+
+    if (
+      error &&
+      typeof error === "object" &&
+      "text" in error &&
+      typeof (error as { text?: unknown }).text === "string"
+    ) {
+      return (error as { text: string }).text;
+    }
+
+    if (
+      error &&
+      typeof error === "object" &&
+      "message" in error &&
+      typeof (error as { message?: unknown }).message === "string"
+    ) {
+      return (error as { message: string }).message;
+    }
+
+    return "Une erreur est survenue lors de l'envoi du message.";
+  };
+
   const handleSubmit = async () => {
     try {
       setLoading(true);
@@ -50,11 +80,7 @@ export default function ContactForm() {
       setFormData(emptyFormData);
     } catch (error) {
       console.error(error);
-      setError(
-        error instanceof Error
-          ? error.message
-          : "Une erreur est survenue lors de l'envoi du message.",
-      );
+      setError(getErrorMessage(error));
     } finally {
       setLoading(false);
     }

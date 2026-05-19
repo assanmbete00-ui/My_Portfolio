@@ -15,7 +15,7 @@ export async function sendEmail({
 }: SendEmailProps) {
   return emailjs.send(
     "service_wj6z599",
-    "template_ye7hnqa",
+    "template_ia7oo17",
     {
       from_name: name,
       from_email: email,
