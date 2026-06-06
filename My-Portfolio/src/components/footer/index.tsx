@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import Container from "@components/container";
 import SocialButton from "@components/socialButton";
 import { navigationLinks, socials } from "./data";
+import { NavLink,} from "react-router-dom";
 import styles from "./style";
 
 export default function Footer() {
@@ -23,9 +24,16 @@ export default function Footer() {
 
             <Box sx={styles.nav}>
               {navigationLinks.map((item) => (
-                <Typography key={item.label} sx={styles.navLink}>
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  style={({ isActive }) => ({
+                    ...styles.navLink,
+                    ...(isActive ? styles.activeNavLink : {}),
+                  })}
+                >
                   {item.label}
-                </Typography>
+                </NavLink>
               ))}
             </Box>
           </Box>
@@ -39,7 +47,14 @@ export default function Footer() {
 
                 return (
                   <SocialButton key={item.id}>
-                    <Icon />
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "inherit" }}
+                    >
+                      <Icon />
+                    </a>
                   </SocialButton>
                 );
               })}

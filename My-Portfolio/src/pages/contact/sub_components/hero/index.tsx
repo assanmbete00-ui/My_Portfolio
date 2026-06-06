@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import SectionTitle from "@components/sectionTitle";
 import styles from "./styles";
 
+
 export default function Hero() {
   return (
     <Box component="section" sx={styles.section}>
@@ -19,7 +20,7 @@ export default function Hero() {
             <SectionTitle 
               subtitle="Contact"
               title={`Construisons quelque chose qui mérite d'exister.`}
-              titleColor="#fff"
+              titleColor= "#fff"
               description={`Écrivez un mot sur votre projet, posez une question, 
                 ou venez simplement dire bonjour.`}
             />

@@ -1,4 +1,6 @@
-import { COLORS } from "@constants/colors";
+import {HERO_GRADIENT, 
+  TEXT_PRIMARY, 
+  TEXT_SECONDARY, PRIMARY  } from "@constants/colors";
 
 const styles = {
   section: {
@@ -8,7 +10,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: COLORS.background.gradient,
+    background: HERO_GRADIENT,
   },
 
   content: {
@@ -56,14 +58,14 @@ const styles = {
 
   availabilityText: {
     fontSize: "0.9rem",
-    color: COLORS.text.secondary,
+    color: TEXT_SECONDARY,
   },
 
   title: {
     fontFamily: "Playfair Display, serif",
     fontWeight: 700,
     lineHeight: 1.1,
-    color: COLORS.text.primary,
+    color: TEXT_PRIMARY,
     mb: 3,
     maxWidth: "900px",
     fontSize: {
@@ -75,12 +77,12 @@ const styles = {
   },
 
   highlight: {
-    color: COLORS.primary.main,
+    color: PRIMARY,
   },
 
   description: {
     maxWidth: "720px",
-    color: COLORS.text.secondary,
+    color: TEXT_SECONDARY,
     lineHeight: 1.9,
     mb: 5,
     fontSize: {

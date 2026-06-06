@@ -1,4 +1,4 @@
-import { COLORS } from "@constants/colors";
+import { HERO_GRADIENT } from "@constants/colors";
 
 const styles = {
   section: {
@@ -8,7 +8,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: COLORS.background.gradient,
+    background: HERO_GRADIENT,
   },
 
   container: {

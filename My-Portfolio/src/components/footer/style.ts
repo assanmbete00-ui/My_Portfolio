@@ -1,9 +1,14 @@
-import { COLORS } from "@constants/colors";
+import {
+  FOOTER_BG,
+  TEXT_DARK,
+  TEXT_SECONDARY,
+  PRIMARY,
+} from "@constants/colors";
 
 const styles = {
   footer: {
     width: "100%",
-    backgroundColor: COLORS.background.footer,
+    backgroundColor: FOOTER_BG,
   },
 
   top: {
@@ -23,7 +28,7 @@ const styles = {
 
   title: {
     fontFamily: "Playfair Display, serif",
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontWeight: 700,
 
     mb: 2,
@@ -35,18 +40,23 @@ const styles = {
   },
 
   description: {
-    color: COLORS.text.secondary,
+    color: TEXT_SECONDARY,
     lineHeight: 1.8,
     maxWidth: "320px",
   },
 
   sectionTitle: {
-    color: COLORS.text.secondary,
+    color: TEXT_SECONDARY,
     fontWeight: 700,
     letterSpacing: "2px",
     textTransform: "uppercase",
     mb: 3,
     fontSize: "0.9rem",
+
+    "&:hover": {
+      color: PRIMARY,
+      textdecoration: "underline",
+    }
   },
 
   nav: {
@@ -56,14 +66,19 @@ const styles = {
   },
 
   navLink: {
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     cursor: "pointer",
     transition: "0.3s ease",
     width: "fit-content",
+    textDecoration: "none",
 
     "&:hover": {
-      color: COLORS.primary.main,
+      color: PRIMARY,
     },
+  },
+
+  activeNavLink: {
+    color: PRIMARY,
   },
 
   socials: {
@@ -74,17 +89,17 @@ const styles = {
   },
 
   location: {
-    color: COLORS.text.secondary,
+    color: TEXT_SECONDARY,
   },
 
   bottom: {
     borderTop: "1px solid #E5E7EB",
     py: 3,
     textAlign: "center",
-  }, 
+  },
 
   copyright: {
-    color: COLORS.text.secondary,
+    color: TEXT_SECONDARY,
     fontSize: "0.95rem",
   },
 };

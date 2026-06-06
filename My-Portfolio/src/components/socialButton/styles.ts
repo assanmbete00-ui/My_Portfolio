@@ -1,4 +1,4 @@
-import { COLORS } from "@constants/colors";
+import { PRIMARY, TEXT_SECONDARY } from "@constants/colors";
 
 const styles = {
   button: {
@@ -9,14 +9,14 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    color: COLORS.text.secondary,
+    color: TEXT_SECONDARY,
     transition: "0.3s ease",
     cursor: "pointer",
 
     "&:hover": {
-      backgroundColor: COLORS.primary.main,
+      backgroundColor: PRIMARY,
       color: "#FFFFFF",
-      borderColor: COLORS.primary.main,
+      borderColor: PRIMARY,
       transform: "translateY(-3px)",
     },
   },

@@ -1,4 +1,4 @@
-import { COLORS } from "@constants/colors";
+import { PRIMARY, TEXT_DARK } from "@constants/colors";
 
 const styles = {
   content: {
@@ -6,7 +6,7 @@ const styles = {
   },
 
   period: {
-    color: COLORS.primary.main,
+    color: PRIMARY,
     fontSize: "0.78rem",
     fontWeight: 700,
     letterSpacing: "1px",
@@ -15,7 +15,7 @@ const styles = {
   },
 
   title: {
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontFamily: "Playfair Display, serif",
     fontWeight: 700,
     lineHeight: 1.3,
@@ -33,13 +33,13 @@ const styles = {
   button: {
     p: 0,
     minWidth: "auto",
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontWeight: 600,
     textTransform: "none",
 
     "&:hover": {
       backgroundColor: "transparent",
-      color: COLORS.primary.main,
+      color: PRIMARY,
     },
   },
 

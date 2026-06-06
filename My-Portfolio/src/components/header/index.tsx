@@ -8,9 +8,8 @@ import styles from "./style";
 import { navLinks } from "./navItems";
 
 export default function Header() {
-  const navigate = useNavigate();
-
   const [openDrawer, setOpenDrawer] = useState(false);
+  const navigate = useNavigate();
 
   const handleOpenDrawer = () => {
     setOpenDrawer(true);

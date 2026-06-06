@@ -1,10 +1,11 @@
-import { COLORS } from "@constants/colors";
+import { FOOTER_BG, PRIMARY, TEXT_DARK, TEXT_SECONDARY } from "@constants/colors";
 
 const styles = {
   section: {
     width: "100vw",
     marginLeft: "calc(-50vw + 50%)",
-    backgroundColor: "#e5e9ee",
+   // backgroundColor: FOOTER_BG,
+    
 
     py: {
       xs: 8,
@@ -24,7 +25,7 @@ const styles = {
   },
 
   formCard: {
-    backgroundColor: "#fff",
+    backgroundColor: FOOTER_BG,
     border: "1px solid rgba(15,23,42,0.08)",
     borderRadius: "24px",
 
@@ -41,7 +42,7 @@ const styles = {
 
   title: {
     fontFamily: "Playfair Display, serif",
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontWeight: 700,
     lineHeight: 1.1,
     fontSize: {
@@ -53,7 +54,7 @@ const styles = {
   label: {
     mb: 1.2,
     fontWeight: 600,
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontSize: "0.95rem",
   },
 
@@ -61,8 +62,8 @@ const styles = {
     
     "& .MuiOutlinedInput-root": {
       borderRadius: "14px",
-      backgroundColor: COLORS.background.footer,
-      color: COLORS.text.auther,
+      backgroundColor: FOOTER_BG,
+      color: TEXT_DARK,
     },
   },
 
@@ -73,7 +74,7 @@ const styles = {
   },
 
   infoCard: {
-    backgroundColor: COLORS.background.footer,
+    backgroundColor: FOOTER_BG,
     border: "1px solid rgba(15,23,42,0.08)",
     borderRadius: "24px",
     p: 4,
@@ -82,22 +83,22 @@ const styles = {
   infoTitle: {
     fontFamily: "Playfair Display, serif",
     fontWeight: 700,
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     mb: 4,
     fontSize: "2rem",
   },
 
   icon: {
-    color: COLORS.primary.main,
+    color: PRIMARY,
   },
 
   infoText: {
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontWeight: 500,
   },
 
   location: {
-    color: COLORS.text.secondary,
+    color: TEXT_SECONDARY,
   },
 
   map: {

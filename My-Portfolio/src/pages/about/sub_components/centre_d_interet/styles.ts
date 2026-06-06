@@ -1,4 +1,4 @@
-import { COLORS } from "@constants/colors";
+import { FOOTER_BG, TEXT_DARK, PRIMARY } from "@constants/colors";
 
 const styles = {
   section: {
@@ -23,7 +23,7 @@ const styles = {
   },
 
   card: {
-    backgroundColor: COLORS.background.footer,
+    backgroundColor: FOOTER_BG,
     borderRadius: "14px",
     border: "1px solid rgba(15, 23, 42, 0.08)",
 
@@ -32,12 +32,12 @@ const styles = {
     transition: "0.3s",
 
     "&:hover": {
-       border: COLORS.primary.main,
+       border: PRIMARY,
     },
   },
 
   text: {
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontWeight: 600,
     lineHeight: 1.6,
     fontSize: "1rem",

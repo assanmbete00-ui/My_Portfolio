@@ -9,7 +9,7 @@ const interests = [
   "Design d’interfaces et expérience utilisateur",
   "Voyages et découvertes culturelles",
   "Football et sports en général",
-  "Cuisine et gastronomie",
+  "Films et séries",
 ];
 
 const MotionBox = motion(Box);

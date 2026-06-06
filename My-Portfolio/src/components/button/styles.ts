@@ -1,16 +1,16 @@
-import { COLORS } from "@constants/colors";
+import { PRIMARY, PRIMARY_LIGHT, TEXT_PRIMARY, TEXT_DARK } from "@constants/colors";
 
 const styles = {
   contained: {
     minWidth: 180,
     py: 1.6,
     borderRadius: "12px",
-    backgroundColor: COLORS.primary.main,
+    backgroundColor: PRIMARY,
     fontWeight: 600,
     boxShadow: "none",
 
     "&:hover": {
-      backgroundColor: COLORS.primary.light,
+      backgroundColor: PRIMARY_LIGHT,
       boxShadow: "none",
     },
   },
@@ -20,10 +20,10 @@ const styles = {
     py: 1.6,
     borderRadius: "12px",
     borderColor: "rgba(255,255,255,0.15)",
-    color: COLORS.text.primary,
+    color: TEXT_PRIMARY,
 
     "&:hover": {
-      borderColor: COLORS.primary.main,
+      borderColor: PRIMARY,
       backgroundColor: "rgba(255,255,255,0.03)",
     },
   },
@@ -33,13 +33,13 @@ const styles = {
     px: 0,
     py: 0,
     borderRadius: "0",
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     backgroundColor: "transparent",
     textTransform: "none",
 
     "&:hover": {
       backgroundColor: "transparent",
-      color: COLORS.primary.main,
+      color: PRIMARY,
     },
   },
 };

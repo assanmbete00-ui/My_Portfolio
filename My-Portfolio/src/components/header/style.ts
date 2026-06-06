@@ -1,11 +1,11 @@
 import { Theme } from "@mui/material/styles";
-import { COLORS } from "@constants/colors";
+import { PRIMARY, HEADER_BG,TEXT_SECONDARY } from "@constants/colors";
 
 const styles = {
   appBar: {
-    backgroundColor: COLORS.background.header,
+    backgroundColor: HEADER_BG,
     boxShadow: "none",
-    borderBottom: "1px solid #F3F4F6",
+    borderBottom: "1px solid #E5E7EB",
   },
 
   toolbar: {
@@ -26,7 +26,7 @@ const styles = {
     width: 10,
     height: 10,
     borderRadius: "50%",
-    backgroundColor: COLORS.primary.main,
+    backgroundColor: PRIMARY,
   },
 
   logoText: {
@@ -53,22 +53,22 @@ const styles = {
     textDecoration: "none",
     fontSize: "0.95rem",
     fontWeight: 500,
-    color: COLORS.text.secondary,
+    color: TEXT_SECONDARY,
     transition: "0.3s ease",
 
     "&:hover": {
-      color: COLORS.primary.main,
+      color: PRIMARY,
       fontWeight: 600,
     },
   },
 
   activeNavLink: {
-    color: COLORS.primary.main,
+    color: PRIMARY,
   },
 
   mobileMenuButton: (theme: Theme) => ({
     display: "none",
-    color: COLORS.primary.main,
+    color: PRIMARY,
     [theme.breakpoints.down("md")]: {
       display: "flex",
     },

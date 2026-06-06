@@ -1,15 +1,16 @@
 import type { Theme } from "@mui/material/styles";
-//import { COLORS } from "@constants/colors";
+import { FOOTER_BG } from "@constants/colors";
 
 const styles = {
-  section: {
-    width: "100%",
-    //backgroundColor: COLORS.background.default,
-    py: {
-      xs: 10,
-      md: 16,
-    },
-  },
+ section: {
+     width: "100vw",
+     marginLeft: "calc(-50vw + 50%)",
+     minHeight: "calc(100vh - 80px)",
+     display: "flex",
+     alignItems: "center",
+     justifyContent: "center",
+     background: FOOTER_BG,
+   },
 
   container: {
     display: "flex",

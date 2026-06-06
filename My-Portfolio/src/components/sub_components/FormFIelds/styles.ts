@@ -1,9 +1,9 @@
-import { COLORS } from "@constants/colors";
+import { FOOTER_BG, TEXT_DARK } from "@constants/colors";
 
 const styles = {
   title: {
     fontFamily: "Playfair Display, serif",
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontWeight: 700,
     lineHeight: 1.1,
     fontSize: {
@@ -16,15 +16,15 @@ const styles = {
     label: {
     mb: 1.2,
     fontWeight: 600,
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontSize: "0.95rem",
   },
 
   input: {
     "& .MuiOutlinedInput-root": {
         borderRadius: "14px",
-        backgroundColor: COLORS.background.footer,
-        color: COLORS.text.auther,
+        backgroundColor: FOOTER_BG,
+        color: TEXT_DARK,
   },
     mb: 3,
   },

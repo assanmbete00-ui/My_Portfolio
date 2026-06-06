@@ -1,10 +1,10 @@
-import { COLORS } from "@constants/colors";
+//import { FOOTER_BG } from "@constants/colors";
 
 const styles = {
   section: {
      width: "100vw",
     marginLeft: "calc(-50vw + 50%)",
-    backgroundColor: COLORS.background.footer,
+   // backgroundColor: FOOTER_BG,
     
     py: {
       xs: 8,

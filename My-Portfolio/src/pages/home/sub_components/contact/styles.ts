@@ -1,4 +1,4 @@
-import { COLORS } from "@constants/colors";
+import { PRIMARY, HERO_GRADIENT, WHITE, TEXT_SECONDARY } from "@constants/colors";
 
 const styles = {
   section: {
@@ -8,7 +8,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: COLORS.background.gradient,
+    background: HERO_GRADIENT,
 
     py: {
       xs: 10,
@@ -19,16 +19,16 @@ const styles = {
   },
 
   subtitle: {
-    color: COLORS.primary.main,
+    color: PRIMARY,
     fontWeight: 700,
     letterSpacing: "4px",
     textTransform: "uppercase",
     mb: 3,
-    fontSize: "0.85rem",
+    fontSize: "2rem",
   },
 
   title: {
-    color: "#FFFFFF",
+    color: WHITE,
     fontFamily: "Playfair Display, serif",
     fontWeight: 700,
     lineHeight: 1.1,
@@ -41,7 +41,7 @@ const styles = {
   },
 
   description: {
-    color: "#7B859F",
+    color: TEXT_SECONDARY,
     lineHeight: 1.8,
     maxWidth: "700px",
     margin: "0 auto",

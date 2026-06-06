@@ -1,9 +1,9 @@
-import { COLORS } from "@constants/colors";
+import { PRIMARY, WHITE } from "@constants/colors";
 
 const styles = {
   paper: {
     width: 260,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: WHITE,
     padding: "2rem 1.5rem",
   },
 
@@ -27,13 +27,13 @@ const styles = {
     transition: "0.3s ease",
 
     "&:hover": {
-      color: COLORS.primary.main,
+      color: PRIMARY,
       fontWeight: 600,
     },
   },
 
   activeNavLink: {
-    color: COLORS.primary.main,
+    color: PRIMARY,
   },
 };
 

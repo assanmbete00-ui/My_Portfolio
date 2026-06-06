@@ -1,10 +1,10 @@
-import { COLORS } from "@constants/colors";
+import { FOOTER_BG, TEXT_DARK } from "@constants/colors";
 
 const styles = {
   section: {
     width: "100vw",
     marginLeft: "calc(-50vw + 50%)",
-    backgroundColor: "#e5e9ee",
+    //backgroundColor: FOOTER_BG, ,
 
     py: {
       xs: 10,
@@ -28,7 +28,7 @@ const styles = {
   blockTitle: {
     fontFamily: "Playfair Display, serif",
     fontWeight: 700,
-    color: COLORS.text.auther,
+    color: TEXT_DARK,
     fontSize: {
       xs: "1.6rem",
       md: "2rem",

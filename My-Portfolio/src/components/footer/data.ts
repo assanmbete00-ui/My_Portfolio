@@ -1,6 +1,6 @@
 import { ElementType } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+//import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import WhatsappIcon from "@mui/icons-material/WhatsApp";
@@ -16,13 +16,43 @@ export const navigationLinks = [
 export type SocialItem = {
   id: number;
   icon: ElementType;
+  label: string;
+  href: string;
 };
 
 export const socials: SocialItem[] = [
-  { id: 1, icon: GitHubIcon },
-  { id: 2, icon: LinkedInIcon },
-  { id: 3, icon: TwitterIcon },
-  { id: 4, icon: MailOutlineIcon },
-  { id: 5, icon: WhatsappIcon },
-  { id: 6, icon: FacebookIcon },
+  {
+    id: 1,
+    icon: GitHubIcon,
+    label: "GitHub",
+    href: "https://gitub.com/",
+  },
+
+  {
+    id: 2,
+    icon: TwitterIcon,
+    label: "X",
+    href: "https://x.com/",
+  },
+
+  {
+    id: 3,
+    icon: MailOutlineIcon,
+    label: "Email",
+    href: "mailto:Assanmbete00@gmail.com",
+  },
+
+  {
+    id: 4,
+    icon: WhatsappIcon,
+    label: "WhatsApp",
+    href: "https://wa.me/237657534392",
+  },
+
+  {
+    id: 5,
+    icon: FacebookIcon,
+    label: "Facebook",
+    href: "https://facebook.com/Assan_mb",
+  },
 ];
