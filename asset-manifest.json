@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/My_Portfolio/static/js/main.282a7f07.js",
+    "main.js": "/My_Portfolio/static/js/main.92504f7b.js",
     "static/media/artisant.jpg": "/My_Portfolio/static/media/artisant.471ef6c530803b078251.jpg",
     "static/media/formation.jpg": "/My_Portfolio/static/media/formation.9681ce71bc4e47c521e3.jpg",
     "static/media/chefferie.png": "/My_Portfolio/static/media/chefferie.4247ef0268b4228be6f6.png",
@@ -18,9 +18,9 @@
     "static/media/lapnombapay.png": "/My_Portfolio/static/media/lapnombapay.58c473f198f54f706a39.png",
     "static/media/profil0.jpeg": "/My_Portfolio/static/media/profil0.ceca47b5e722cae72f3d.jpeg",
     "index.html": "/My_Portfolio/index.html",
-    "main.282a7f07.js.map": "/My_Portfolio/static/js/main.282a7f07.js.map"
+    "main.92504f7b.js.map": "/My_Portfolio/static/js/main.92504f7b.js.map"
   },
   "entrypoints": [
-    "static/js/main.282a7f07.js"
+    "static/js/main.92504f7b.js"
   ]
 }
