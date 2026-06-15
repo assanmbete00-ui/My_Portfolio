@@ -2,6 +2,7 @@ import {
   FOOTER_BG,
   TEXT_DARK,
   TEXT_SECONDARY,
+  TEXT_PRIMARY,
   PRIMARY,
 } from "@constants/colors";
 
@@ -54,7 +55,6 @@ const styles = {
     fontSize: "0.9rem",
 
     "&:hover": {
-      color: PRIMARY,
       textdecoration: "underline",
     }
   },
@@ -93,8 +93,7 @@ const styles = {
   },
 
   bottom: {
-    borderTop: "1px solid #E5E7EB",
-    py: 3,
+    borderTop: "1px solid " + TEXT_PRIMARY,
     textAlign: "center",
   },
 

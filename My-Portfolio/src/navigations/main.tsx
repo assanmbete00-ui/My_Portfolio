@@ -1,6 +1,7 @@
 import type { RouteObject } from "react-router-dom";
 
 import ErrorPage from "@pages/error";
+import UnauthorizedPage from "@pages/unauthorized";
 import Home from "@pages/home";
 import About from "@pages/about";
 import Cv from "@pages/cv";
@@ -42,6 +43,10 @@ const mainNavigation: RouteObject[] = [
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "unauthorized",
+        element: <UnauthorizedPage />,
       },
     ],
   },

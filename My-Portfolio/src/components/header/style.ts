@@ -4,8 +4,9 @@ import { PRIMARY, HEADER_BG,TEXT_SECONDARY } from "@constants/colors";
 const styles = {
   appBar: {
     backgroundColor: HEADER_BG,
-    boxShadow: "none",
-    borderBottom: "1px solid #E5E7EB",
+      boxShadow: "none",
+      borderBottom: "1px solid #F3F4F6",
+      
   },
 
   toolbar: {

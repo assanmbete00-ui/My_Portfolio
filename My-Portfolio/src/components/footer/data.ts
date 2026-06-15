@@ -25,7 +25,7 @@ export const socials: SocialItem[] = [
     id: 1,
     icon: GitHubIcon,
     label: "GitHub",
-    href: "https://gitub.com/",
+    href: "https://GitHub.com/assanmbete00-ui",
   },
 
   {
@@ -53,6 +53,6 @@ export const socials: SocialItem[] = [
     id: 5,
     icon: FacebookIcon,
     label: "Facebook",
-    href: "https://facebook.com/Assan_mb",
+    href: "https://facebook.com/",
   },
 ];

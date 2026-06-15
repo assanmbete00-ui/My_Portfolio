@@ -1,4 +1,4 @@
-import { PRIMARY,TEXT_DARK,TEXT_SECONDARY } from "@constants/colors";
+import { PRIMARY, TEXT_DARK, TEXT_SECONDARY } from "@constants/colors";
 
 const styles = {
   container: {
@@ -15,8 +15,12 @@ const styles = {
     textTransform: "uppercase",
     letterSpacing: "2px",
     mb: 1,
-    fontSize: "2rem",
-
+    fontSize: {
+      xs: "1rem",
+      sm: "1.1rem",
+      md: "1.2rem",
+      lg: "1.3rem",
+    },
   },
 
   title: {
@@ -26,7 +30,9 @@ const styles = {
     color: TEXT_DARK,
     fontSize: {
       xs: "2rem",
+      sm: "2.4rem",
       md: "3rem",
+      lg: "3.5rem",
     },
   },
 
@@ -36,8 +42,10 @@ const styles = {
     color: TEXT_SECONDARY,
     lineHeight: 1.8,
     fontSize: {
-      xs: "1rem",
+      xs: "0.95rem",
+      sm: "1rem",
       md: "1.05rem",
+      lg: "1.1rem",
     },
 
     mx: {
