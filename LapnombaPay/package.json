@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "styled-components": "^6.4.0"
-  },
-  "devDependencies": {
-    "@types/styled-components": "^5.1.36",
-    "typescript": "^6.0.2"
-  }
-}
