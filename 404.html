@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page introuvable — Assan Mbete</title>
+    <script>
+      (function () {
+        var base = "/My_Portfolio/";
+        if (window.location.pathname.indexOf(base) !== 0) return;
+        var requested = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace(base + "?__portfolio_route=" + encodeURIComponent(requested));
+      })();
+    </script>
+  </head>
+  <body>
+    <h1>Page introuvable</h1>
+    <p>Cette adresse ne correspond pas à une page disponible.</p>
+    <a href="/My_Portfolio/">Revenir à l’accueil</a>
+  </body>
+</html>
